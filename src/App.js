@@ -2,6 +2,7 @@
 import "./App.css";
 import Login from './pages/login/Login'
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import ChatMessages from "./pages/messagePage/ChatMessages";
 
 function App() {
  
@@ -16,9 +17,9 @@ function App() {
           {!user ? (
             <Login />
           ) : (
-            <h1>
-            Chat page
-            </h1>
+            <div className="main">
+              <ChatMessages />
+            </div>
           )}
         </div>
       </Switch>
