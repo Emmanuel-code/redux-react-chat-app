@@ -5,7 +5,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 function App() {
  
-  const user = null
+  const user = 'Emma'
   
   return (
         <Router>
