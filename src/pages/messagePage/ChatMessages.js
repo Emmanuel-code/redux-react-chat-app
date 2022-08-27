@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ChatMessage from "../../component/ChatMessage";
+import MessageInput from "../../component/form/MessageInput";
 import './chatMessages.css'
 
 function ChatMessages() {
@@ -37,7 +38,7 @@ text:'i had a dream'
         ))}
 
       </div>
-
+<MessageInput className='bb'/>
     </div>
   );
 }
