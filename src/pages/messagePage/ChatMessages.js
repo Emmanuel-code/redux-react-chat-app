@@ -7,18 +7,20 @@ const messages = [
     {
       name: "poau",
       id: 1,
-      messa: "how are you",
+      text: 'oh'
     },
     {
       name: "nit",
       id: 2,
-      messa: "i am great",
+    
+text:'i had a dream'
     },
     ,
     {
       name: "Brian",
       id: 3,
-      messa: "did yiu see my cat",
+      
+      text:'did you see my'
     },
   ];
 
@@ -31,7 +33,7 @@ const messages = [
       </div>
       <div className="chats">
         {messages.map((m) => (
-          <ChatMessage key={m.id} name={m.name} massage={m.messa} />
+          <ChatMessage key={m.id} name={m.name} text={m.text}  />
         ))}
 
       </div>
