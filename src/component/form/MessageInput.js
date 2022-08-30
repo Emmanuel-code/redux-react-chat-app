@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addChat, chat, selectMessage } from "../../features/messageSlice";
 import "./messageInput.css";
-import { selectUser } from "../../features/userSlice";
+import { selectUser } from "../../features / userSlice";
+import { useRef } from "react";
+
 function MessageInput() {
   const user = useSelector(selectUser);
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
+  const chatRef = useRef(null);
   let chatInput = {
     id: "",
     name: "",
@@ -19,7 +22,12 @@ function MessageInput() {
       name: user.name,
       message: input,
     };
-
+dispatch(addChat(chatInput));
+chatRef?.current?.scrollIntoView({
+  behavior: "smooth",
+  block: "nearest",
+  inline: "start",
+});
    
     setInput("");
   };

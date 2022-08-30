@@ -31,7 +31,13 @@ function ChatMessages() {
 //       text:'did you see my'
 //     },
 //   ];
-
+  useEffect(() => {
+    chatRef?.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+  }, []);
 
   return (
     <div className="chat__container">
