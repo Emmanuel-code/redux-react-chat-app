@@ -1,9 +1,12 @@
 import { Avatar } from "@material-ui/core";
 import React from "react";
 import "./chatMessage.css";
-function ChatMessage({ name,text }) {
- const user='Brian'
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
 
+function ChatMessage({ name,text }) {
+
+    const user = useSelector(selectUser);
   
   return (
     <div className="chat_message">
