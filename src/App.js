@@ -3,13 +3,14 @@ import "./App.css";
 import Login from './pages/login/Login'
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import ChatMessages from "./pages/messagePage/ChatMessages";
+import {  useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
 
 function App() {
- 
-  const user = 'Emma'
-  
+  // const user = "Emmas";
+ const user = useSelector(selectUser);
   return (
-        <Router>
+    <Router>
       <Switch>
         <Route path="/login" component={Login} />
 
@@ -24,7 +25,6 @@ function App() {
         </div>
       </Switch>
     </Router>
-     
   );
 }
 
