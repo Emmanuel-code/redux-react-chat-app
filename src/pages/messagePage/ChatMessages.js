@@ -51,8 +51,9 @@ function ChatMessages() {
         {messages.map((m) => (
           <ChatMessage key={m.id} name={m.name} text={m.text} />
         ))}
+        <div ref={chatRef} className="chatBottom" />
       </div>
-      <MessageInput className="bb" />
+      <MessageInput chatRef={chatRef} className="bb" />
     </div>
   );
 }
