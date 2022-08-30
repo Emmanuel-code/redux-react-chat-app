@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addChat, chat, selectMessage } from "../../features/messageSlice";
 import "./messageInput.css";
-import { selectUser } from "../../features / userSlice";
+import { selectUser } from "../../features/userSlice";
 import { useRef } from "react";
 
 function MessageInput() {

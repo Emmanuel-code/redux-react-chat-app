@@ -6,31 +6,32 @@ import { useDispatch } from "react-redux";
 import { logout } from "../../features/userSlice";
 import { useSelector } from "react-redux";
 import { selectMessage } from "../../features/messageSlice";
-
+import { useRef } from "react";
 function ChatMessages() {
   const dispatch = useDispatch();
+ const chatRef = useRef(null);
 
   const messages = useSelector((state) => state.message.messages);
-// const messages = [
-//     {
-//       name: "poau",
-//       id: 1,
-//       text: 'oh'
-//     },
-//     {
-//       name: "nit",
-//       id: 2,
-    
-// text:'i had a dream'
-//     },
-//     ,
-//     {
-//       name: "Brian",
-//       id: 3,
-      
-//       text:'did you see my'
-//     },
-//   ];
+  // const messages = [
+  //     {
+  //       name: "poau",
+  //       id: 1,
+  //       text: 'oh'
+  //     },
+  //     {
+  //       name: "nit",
+  //       id: 2,
+
+  // text:'i had a dream'
+  //     },
+  //     ,
+  //     {
+  //       name: "Brian",
+  //       id: 3,
+
+  //       text:'did you see my'
+  //     },
+  //   ];
   useEffect(() => {
     chatRef?.current?.scrollIntoView({
       behavior: "smooth",
