@@ -1,5 +1,5 @@
 import { Button } from '@material-ui/core';
-import React,{useState,useState} from 'react'
+import React,{useState} from 'react'
 import './messageInput.css'
 function MessageInput() {
    const [input, setInput] = useState("");
