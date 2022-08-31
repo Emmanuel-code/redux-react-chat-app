@@ -8,7 +8,7 @@ import { selectUser } from "./features/userSlice";
 
 function App() {
   // const user = "Emmas";
- const user = useSelector(selectUser);
+  const user = useSelector(selectUser);
   return (
     <Router>
       <Switch>
@@ -19,7 +19,8 @@ function App() {
             <Login />
           ) : (
             <div className="main">
-              <ChatMessages />
+               
+                <ChatMessages />
             </div>
           )}
         </div>
